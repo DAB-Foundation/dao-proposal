@@ -3,10 +3,10 @@ pragma solidity ^0.4.11;
 import './interfaces/IDABDao.sol';
 import './Proposal.sol';
 
-contract ProposalToAcceptDABOwnership is Proposal{
+contract ProposalToDisableLoanPlanFormula is Proposal{
 
 
-    function ProposalToAcceptDABOwnership(
+    function ProposalToDisableLoanPlanFormula(
     IDABDao _dao,
     SmartTokenController _voteTokenController,
     address _proposalContract,
@@ -15,8 +15,8 @@ contract ProposalToAcceptDABOwnership is Proposal{
     }
 
     function execute() public excuteStage {
-    // accept DAB ownership
-        dao.acceptDABOwnership();
+    // disable LoanPlanFormula
+        dao.disableLoanPlanFormula();
     }
 
 }
